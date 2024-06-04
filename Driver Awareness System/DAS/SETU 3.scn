@@ -1,0 +1,61 @@
+<scenario name="my scenario" simtime="12,0965309200603" simtimemax="20" version="1" timelinezoom="1" hscrolloffset="0">
+  <routes>
+    <route name="Route1" color="16711680">
+      <points>
+        <point x="52,2453626116973" y="-7,13014775368224" />
+        <point x="52,2453034895166" y="-7,13061714025984" />
+        <point x="52,2452657172743" y="-7,13104361149321" />
+        <point x="52,2452377986769" y="-7,13141257580098" />
+        <point x="52,2452379163776" y="-7,13156887667348" />
+        <point x="52,2452264592524" y="-7,13175248134078" />
+        <point x="52,245222197101" y="-7,13184693309317" />
+        <point x="52,2452148068784" y="-7,13200786563406" />
+        <point x="52,2451885305215" y="-7,13219025584708" />
+        <point x="52,2451778557321" y="-7,13228547426711" />
+        <point x="52,2451688232292" y="-7,13241422029982" />
+        <point x="52,2451614329972" y="-7,1325724706317" />
+        <point x="52,2451458313927" y="-7,13286751362334" />
+      </points>
+      <stations>
+        <station name="Car1" offset="0" color="16776960" trackingid="3" length="3" width="2" height="2">
+          <attribute name="Speed" trigger="true" defaultvalue="0">
+            <keypoints>
+              <keypoint time="0" value="40" />
+              <keypoint time="7,35" value="40" />
+              <keypoint time="8,9" value="30" />
+              <keypoint time="16,4" value="60" />
+              <keypoint time="25,81" value="0" />
+              <keypoint time="29,68" value="0" />
+              <keypoint time="32,88" value="60" />
+            </keypoints>
+          </attribute>
+        </station>
+      </stations>
+    </route>
+    <route name="Route2" color="32768">
+      <points>
+        <point x="52,2452203585428" y="-7,13161929109481" />
+        <point x="52,2451994672022" y="-7,13193355547582" />
+        <point x="52,2451943967087" y="-7,13196899252361" />
+        <point x="52,2451795014929" y="-7,13198640796195" />
+        <point x="52,2451573308007" y="-7,13199043127547" />
+        <point x="52,2450817861347" y="-7,13198372575293" />
+        <point x="52,2449996718542" y="-7,13198372575293" />
+        <point x="52,2449044195263" y="-7,13198506685744" />
+      </points>
+      <stations>
+        <station name="Car2" offset="2" color="8454016" trackingid="4" length="3" width="2" height="2">
+          <attribute name="Speed" trigger="true" defaultvalue="0">
+            <keypoints>
+              <keypoint time="0" value="20" />
+              <keypoint time="7,05" value="0" />
+              <keypoint time="11,43" value="0" />
+              <keypoint time="16,18" value="40" />
+            </keypoints>
+          </attribute>
+        </station>
+      </stations>
+    </route>
+  </routes>
+  <tapes />
+</scenario>

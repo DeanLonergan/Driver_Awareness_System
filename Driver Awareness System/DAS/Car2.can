@@ -1,0 +1,61 @@
+/*@!Encoding:1252*/
+includes
+{
+  #include ".\DataSources_Templates\ASNV_Template_BaseDatatypes.cin"
+  #include ".\DataSources_Templates\ASNV_Template_CAM.cin"
+  #include ".\DataSources_Templates\ASNV_Template_DENM.cin"
+  #include ".\DataSources_Templates\ASNV_Template_MAP.cin"
+  #include ".\DataSources_Templates\ASNV_Template_SPAT.cin"
+  #include ".\DataSources_Templates\ASNV_Template_IVIM.cin"
+  #include ".\Nodes\Position.cin"
+}
+
+variables
+{
+  double vehicleCamLong = 0;
+  double vehicleCamLat = 0;
+  long stopVehicle = 0;
+}
+
+on start
+{
+  enum CallbackType { OnRx, PreTx };
+  C2xRegisterCallback(OnRx,  "OnRxCAM",    "CAM");
+  //C2xRegisterCallback(PreTx, "OnPreTxCAM", "CAM");
+}
+
+// Callback function on receiving CAM messages
+void OnRxCAM(long channel, long dir, long radioChannel, long signalStrength, long signalQuality, long packet)
+{
+  struct CAM camPdu;     
+  
+  double camLong;        
+  double camLat;         
+  long camStationType;   
+  double distanceToCam;   
+  long camSpeed;        
+  long camHeading;      
+  long camStationId;    
+  
+  if (!API_GetCAMParams(packet, camPdu))
+  {
+    
+    // Retrieve some data from the CAM message
+        camStationId = camPdu.header.stationID;
+        camLong = camPdu.cam.camParameters.basicContainer.referencePosition.longitude / 1e07;
+        camLat = camPdu.cam.camParameters.basicContainer.referencePosition.latitude / 1e07;
+        camHeading = camPdu.cam.camParameters.highFrequencyContainer.basicVehicleContainerHighFrequency.heading.headingValue;
+        camSpeed = camPdu.cam.camParameters.highFrequencyContainer.basicVehicleContainerHighFrequency.speed.speedValue;
+        camStationType = camPdu.cam.camParameters.basicContainer.stationType;
+    
+        // Calculate the linear distance to the CAM station whose message was received.
+        distanceToCam = API_PosCalcDistance( vehicleCamLat,  vehicleCamLong, camLat, camLong);
+
+        // write(" *** CAM RECEIVED *** Station Type = %d Long = %f  lat = %f distance away = %f \n", camStationType, camLong, camLat, distanceToCam);
+        // write(" *** station Id %d speed = %d heading = %d \n", camStationId, camSpeed, camHeading );
+    if (camStationId != 3)
+    {
+      //write(" *** CAM RECEIVED *** Station Type = %d Long = %f  lat = %f distance away = %f \n", camStationType, camLong, camLat, distanceToCam);
+    }
+  }
+}

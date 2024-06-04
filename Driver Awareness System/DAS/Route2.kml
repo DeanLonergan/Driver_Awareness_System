@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <Folder>
+      <Placemark>
+        <name>Route2</name>
+        <LineString>
+          <coordinates>-7.12442907111362,52.2475688166405
+-7.12439244811252,52.2474702854547
+</coordinates>
+        </LineString>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

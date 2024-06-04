@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<Panel Type="Vector.CANalyzer.Panels.PanelSerializer, Vector.CANalyzer.Panels.Serializer, Version=17.2.88.0, Culture=neutral, PublicKeyToken=null">
+  <Object Type="Vector.CANalyzer.Panels.Runtime.Panel, Vector.CANalyzer.Panels.Common, Version=17.2.88.0, Culture=neutral, PublicKeyToken=null" Name="Panel" Children="Controls" ControlName="HUD">
+    <Object Type="Vector.CANalyzer.Panels.Design.LEDControl, Vector.CANalyzer.Panels.CommonControls, Version=17.2.88.0, Culture=neutral, PublicKeyToken=null" Name="LEDControl4" ControlName="LED Control 4">
+      <Property Name="Name">LEDControl4</Property>
+      <Property Name="Size">24, 24</Property>
+      <Property Name="Location">22, 114</Property>
+      <Property Name="SwitchValuesVTXml">&lt;Version&gt;2&lt;/Version&gt;&lt;Count&gt;2&lt;/Count&gt;&lt;RxValue&gt;0&lt;/RxValue&gt;&lt;LowerUpper&gt;Lower&lt;/LowerUpper&gt;&lt;TxValue&gt;0&lt;/TxValue&gt;&lt;Color&gt;Gray&lt;/Color&gt;&lt;RxValue&gt;1&lt;/RxValue&gt;&lt;LowerUpper&gt;Lower&lt;/LowerUpper&gt;&lt;TxValue&gt;1&lt;/TxValue&gt;&lt;Color&gt;Red&lt;/Color&gt;</Property>
+      <Property Name="LEDStyle">TriangleLeft</Property>
+      <Property Name="SymbolConfiguration">8;16;;;;carLeft;1;;;-1;;;;;;0</Property>
+      <Property Name="TabIndex">4</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.LEDControl, Vector.CANalyzer.Panels.CommonControls, Version=17.2.88.0, Culture=neutral, PublicKeyToken=null" Name="LEDControl3" ControlName="LED Control 3">
+      <Property Name="Name">LEDControl3</Property>
+      <Property Name="Size">24, 24</Property>
+      <Property Name="Location">154, 114</Property>
+      <Property Name="SwitchValuesVTXml">&lt;Version&gt;2&lt;/Version&gt;&lt;Count&gt;2&lt;/Count&gt;&lt;RxValue&gt;0&lt;/RxValue&gt;&lt;LowerUpper&gt;Lower&lt;/LowerUpper&gt;&lt;TxValue&gt;0&lt;/TxValue&gt;&lt;Color&gt;Gray&lt;/Color&gt;&lt;RxValue&gt;1&lt;/RxValue&gt;&lt;LowerUpper&gt;Lower&lt;/LowerUpper&gt;&lt;TxValue&gt;1&lt;/TxValue&gt;&lt;Color&gt;Red&lt;/Color&gt;</Property>
+      <Property Name="LEDStyle">TriangleRight</Property>
+      <Property Name="SymbolConfiguration">8;16;;;;carRight;1;;;-1;;;;;;0</Property>
+      <Property Name="TabIndex">3</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.LEDControl, Vector.CANalyzer.Panels.CommonControls, Version=17.2.88.0, Culture=neutral, PublicKeyToken=null" Name="LEDControl2" ControlName="LED Control 2">
+      <Property Name="Name">LEDControl2</Property>
+      <Property Name="Size">24, 24</Property>
+      <Property Name="Location">87, 205</Property>
+      <Property Name="SwitchValuesVTXml">&lt;Version&gt;2&lt;/Version&gt;&lt;Count&gt;2&lt;/Count&gt;&lt;RxValue&gt;0&lt;/RxValue&gt;&lt;LowerUpper&gt;Lower&lt;/LowerUpper&gt;&lt;TxValue&gt;0&lt;/TxValue&gt;&lt;Color&gt;Gray&lt;/Color&gt;&lt;RxValue&gt;1&lt;/RxValue&gt;&lt;LowerUpper&gt;Lower&lt;/LowerUpper&gt;&lt;TxValue&gt;1&lt;/TxValue&gt;&lt;Color&gt;Red&lt;/Color&gt;</Property>
+      <Property Name="LEDStyle">TriangleDown</Property>
+      <Property Name="SymbolConfiguration">8;16;;;;carRear;1;;;-1;;;;;;0</Property>
+      <Property Name="TabIndex">2</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.LEDControl, Vector.CANalyzer.Panels.CommonControls, Version=17.2.88.0, Culture=neutral, PublicKeyToken=null" Name="LEDControl1" ControlName="LED Control 1">
+      <Property Name="Name">LEDControl1</Property>
+      <Property Name="Size">24, 24</Property>
+      <Property Name="Location">87, 28</Property>
+      <Property Name="SwitchValuesVTXml">&lt;Version&gt;2&lt;/Version&gt;&lt;Count&gt;2&lt;/Count&gt;&lt;RxValue&gt;0&lt;/RxValue&gt;&lt;LowerUpper&gt;Lower&lt;/LowerUpper&gt;&lt;TxValue&gt;0&lt;/TxValue&gt;&lt;Color&gt;Gray&lt;/Color&gt;&lt;RxValue&gt;1&lt;/RxValue&gt;&lt;LowerUpper&gt;Lower&lt;/LowerUpper&gt;&lt;TxValue&gt;1&lt;/TxValue&gt;&lt;Color&gt;Red&lt;/Color&gt;</Property>
+      <Property Name="LEDStyle">TriangleUp</Property>
+      <Property Name="SymbolConfiguration">8;16;;;;carFrontClose;1;;;-1;;;;;;0</Property>
+      <Property Name="TabIndex">1</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.CompassControl, Vector.CANalyzer.Panels.CommonControls, Version=17.2.88.0, Culture=neutral, PublicKeyToken=null" Name="CompassControl1" Children="Controls" ControlName="Compass 1">
+      <Property Name="Name">CompassControl1</Property>
+      <Property Name="Size">96, 141</Property>
+      <Property Name="Location">52, 58</Property>
+      <Property Name="ShowSpeed">True</Property>
+      <Property Name="SpeedDecimalPlaces">2</Property>
+      <Property Name="SpeedDescription">Speed</Property>
+      <Property Name="SymbolConfiguration1">8;16;;;;dutHeading;2;;;-1;;;Direction;;;0</Property>
+      <Property Name="SymbolConfiguration2">8;16;;;;dutSpeed;2;;;-1;;;Speed;;;0</Property>
+    </Object>
+    <Property Name="Name">Panel</Property>
+    <Property Name="Size">200, 270</Property>
+    <Property Name="BackColor">White</Property>
+  </Object>
+</Panel>

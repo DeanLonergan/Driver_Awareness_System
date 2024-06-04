@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<Panel Type="Vector.CANalyzer.Panels.PanelSerializer, Vector.CANalyzer.Panels.Serializer, Version=17.2.88.0, Culture=neutral, PublicKeyToken=null">
+  <Object Type="Vector.CANalyzer.Panels.Runtime.Panel, Vector.CANalyzer.Panels.Common, Version=17.2.88.0, Culture=neutral, PublicKeyToken=null" Name="Panel" Children="Controls" ControlName="Safe distance">
+    <Object Type="Vector.CANalyzer.Panels.Design.LEDControl, Vector.CANalyzer.Panels.CommonControls, Version=17.2.88.0, Culture=neutral, PublicKeyToken=null" Name="LEDControl1" ControlName="LED Control 1">
+      <Property Name="Name">LEDControl1</Property>
+      <Property Name="Size">24, 24</Property>
+      <Property Name="Location">271, 150</Property>
+      <Property Name="SwitchValuesVTXml">&lt;Version&gt;2&lt;/Version&gt;&lt;Count&gt;2&lt;/Count&gt;&lt;RxValue&gt;0&lt;/RxValue&gt;&lt;LowerUpper&gt;Lower&lt;/LowerUpper&gt;&lt;TxValue&gt;0&lt;/TxValue&gt;&lt;Color&gt;Gray&lt;/Color&gt;&lt;RxValue&gt;1&lt;/RxValue&gt;&lt;LowerUpper&gt;Lower&lt;/LowerUpper&gt;&lt;TxValue&gt;1&lt;/TxValue&gt;&lt;Color&gt;Red&lt;/Color&gt;</Property>
+      <Property Name="SymbolConfiguration">8;16;;;;unsafeDistance;1;;;-1;;;;;;0</Property>
+      <Property Name="TabIndex">9</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=17.2.88.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl3" Children="Controls" ControlName="Static Text 3">
+      <Property Name="Name">StaticTextControl3</Property>
+      <Property Name="Size">58, 13</Property>
+      <Property Name="Location">254, 180</Property>
+      <Property Name="Text">Too Close!</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=17.2.88.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl2" Children="Controls" ControlName="Static Text 2">
+      <Property Name="Name">StaticTextControl2</Property>
+      <Property Name="Size">103, 13</Property>
+      <Property Name="Location">64, 95</Property>
+      <Property Name="Text">Current Distance (m)</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=17.2.88.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl1" Children="Controls" ControlName="Static Text 1">
+      <Property Name="Name">StaticTextControl1</Property>
+      <Property Name="Size">91, 13</Property>
+      <Property Name="Location">416, 95</Property>
+      <Property Name="Text">Safe Distance (m)</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.LCDControl, Vector.CANalyzer.Panels.CommonControls, Version=17.2.88.0, Culture=neutral, PublicKeyToken=null" Name="LCDControl2" ControlName="LCD Control 2">
+      <Property Name="Name">LCDControl2</Property>
+      <Property Name="Size">164, 50</Property>
+      <Property Name="Location">343, 39</Property>
+      <Property Name="DecimalPlaces">0</Property>
+      <Property Name="SymbolConfiguration">8;16;;;;safeDistance;1;;;-1;;;;;;0</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.LCDControl, Vector.CANalyzer.Panels.CommonControls, Version=17.2.88.0, Culture=neutral, PublicKeyToken=null" Name="LCDControl1" ControlName="LCD Control 1">
+      <Property Name="Name">LCDControl1</Property>
+      <Property Name="Size">164, 50</Property>
+      <Property Name="Location">64, 39</Property>
+      <Property Name="DecimalPlaces">0</Property>
+      <Property Name="SymbolConfiguration">8;16;;;;currentDistance;1;;;-1;;;;;;0</Property>
+    </Object>
+    <Property Name="Name">Panel</Property>
+    <Property Name="Size">580, 270</Property>
+    <Property Name="BackColor">White</Property>
+  </Object>
+</Panel>
