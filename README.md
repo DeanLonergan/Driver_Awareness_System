@@ -11,6 +11,15 @@ I enjoyed working on this project and I am very excited to see what further deve
     <img src="https://github.com/DeanLonergan/Driver_Awareness_System/assets/74914758/4839f709-fed0-4888-80d8-ccf53d68ddc0" alt="DAS poster">
 </div>
 
+## The Driver Awareness System in action
+In this example, simulated within CANoe, we can see the yellow car approach the DUT rapidly from behind, overtake it, then pull back in front at a now unsafe longitudinal distance. The D.A.S. monitors the vehicle throughout and presents the appropriate information to the driver through the dashboard and HUD displays, along with the ambient lighting on the driver's side door.
+
+<div align="center">
+    <img src="https://github.com/DeanLonergan/Driver_Awareness_System/assets/74914758/dd7ac928-3135-41f7-a422-1ef0d0a695c8" alt="Safe Longitudinal Distance">
+</div>
+
+*note: DUT = Device Under Test (the EGO vehicle)*
+
 ## How it works
 <div align="center">
     <img src="https://github.com/DeanLonergan/Driver_Awareness_System/assets/74914758/8fc80fd3-b9e7-40ed-ad34-95391ec3696e" alt="Image 1">
@@ -21,8 +30,6 @@ I enjoyed working on this project and I am very excited to see what further deve
 * Adjust the quadrants based on the DUT's heading to align with the DUT's orientation. 
 * Use an equation developed by mobileye.com and both vehicles' speeds', to determine if the vehicle ahead is at a safe distance.
 * Update system variables to indicate whether the other vehicle is in front, right, left, or rear of the DUT and at a safe distance.
-
-*note: DUT = Device Under Test (the EGO vehicle)*
 
 ## Calculating Safe Longitudinal Distance
 
@@ -58,10 +65,18 @@ If it is determined that the vehicle ahead is at an unsafe longitudinal distance
 *https://www.mobileye.com/technology/responsibility-sensitive-safety/*  
 *https://standards.ieee.org/*
 
-## The Driver Awareness System in Action
-
-<div align="center">
-    <img src="https://github.com/DeanLonergan/Driver_Awareness_System/assets/74914758/dd7ac928-3135-41f7-a422-1ef0d0a695c8" alt="Safe Longitudinal Distance">
-</div>
+## The Application of Functional Safety
 
 
+Functional Safety, as defined by ISO 26262, ensures that automotive systems respond correctly to inputs to reduce risks from malfunctions. In this project, the implementation of functional safety involved rigorous safety analysis, hazard identification, and the development of safety measures to manage and mitigate risks associated with the Driver Awareness System.
+
+This process led to the identification and classification of potential hazards, the formulation of safety goals, and the assignment of an Automotive Safety Integrity Level (ASIL) of B. Integrating ISO 26262 in this project changed the development approach, requiring detailed documentation, systematic validation, and verification at each stage. 
+
+The benefits of this approach include:
+* Enhanced reliability
+* Reduced risk of system failures
+* Improved overall safety and operational effectiveness of the D.A.S. in real-time vehicle-to-vehicle scenarios
+
+*Relevant ISO documents:*  
+*ISO 26262-3: https://www.iso.org/standard/68385.html*  
+*ISO 26262-6: https://www.iso.org/standard/68388.html*
