@@ -1,11 +1,11 @@
 # Driver Awareness System
-This was my Final Year Project that I worked on during my last year of BSc (Hons) in Applied Computing at S.E.T.U. I developed it using Vector CANoe, an industry-standard tool that I got to grips with during several of the automotive-specific modules that I attended as part of the Automotive and Automation stream.
+This was my Final Year Project, which I worked on during my last year of BSc (Hons) in Applied Computing at South East Technological University. I developed it using Vector CANoe, an industry-standard tool that I got to grips with during several of the automotive-specific modules I attended as part of the Automotive and Automation stream.
 
 My goal was to apply the principles of functional safety during the development of an automotive software component. The Driver Awareness System, or D.A.S., uses data from Car2X/V2X signals to enhance a driver's situational awareness and alert them to possible conflicts.
 
 The D.A.S. achieves this using location and speed data gathered through the Car2X signals and known kinematic data derived from IEEE 2846. The D.A.S. processes this data and presents it to the driver in a non-abrasive and subtle way using cues on the dashboard, HUD, and through the interior ambient lighting.
 
-I enjoyed working on this project and I am very excited to see what further developments will be made using Car2X signals within the automotive industry. Below is the poster I created for the Computing Project Expo at S.E.T.U. At this expo, my project was given the Highly Commended Award presented by Kargo, which was a very special moment for me and an excellent way to wrap up my time at S.E.T.U.
+I enjoyed working on this project and I am very excited to see what further developments will be made using Car2X signals within the automotive industry. Below is the poster I created for the Computing Project Expo at SETU. At this expo, my project was given the Highly Commended Award presented by Kargo, which was a very special moment for me and an excellent way to wrap up my time at SETU.
 
 <div align="center">
     <img src="https://github.com/DeanLonergan/Driver_Awareness_System/assets/74914758/4839f709-fed0-4888-80d8-ccf53d68ddc0" alt="DAS poster">
