@@ -32,7 +32,6 @@ In this example, simulated within CANoe, we can see the yellow car approach the 
 * Update system variables to indicate whether the other vehicle is in front, right, left, or rear of the DUT and at a safe distance.
 
 ## Calculating Safe Longitudinal Distance
-
 If there is a vehicle ahead:
 
 <div align="center">
@@ -66,8 +65,6 @@ If it is determined that the vehicle ahead is at an unsafe longitudinal distance
 *https://standards.ieee.org/*
 
 ## The Application of Functional Safety
-
-
 Functional Safety, as defined by ISO 26262, ensures that automotive systems respond correctly to inputs to reduce risks from malfunctions. In this project, the implementation of functional safety involved rigorous safety analysis, hazard identification, and the development of safety measures to manage and mitigate risks associated with the Driver Awareness System.
 
 This process led to the identification and classification of potential hazards, the formulation of safety goals, and the assignment of an Automotive Safety Integrity Level (ASIL) of B. Integrating ISO 26262 in this project changed the development approach, requiring detailed documentation, systematic validation, and verification at each stage. 
@@ -80,3 +77,16 @@ The benefits of this approach include:
 *Relevant ISO documents:*  
 *ISO 26262-3: https://www.iso.org/standard/68385.html*  
 *ISO 26262-6: https://www.iso.org/standard/68388.html*
+
+## How to run
+This project has been developed using vector CANoe 17 SP2 (Build 17.2.88) and may not work on older versions.
+
+To open the project, you must first load the configuration in CANoe:
+<div align="center">
+    <img src="https://github.com/DeanLonergan/Driver_Awareness_System/assets/74914758/5fdf1dd2-9c87-49ce-ba01-4379b90b2ef2" alt="Load config">
+</div>
+
+When opened for the first time, it is important to make sure that the panels display correctly. This can be done by first opening the panel editor:
+<div align="center">
+    <img src="https://github.com/DeanLonergan/Driver_Awareness_System/assets/74914758/5eac1f16-4d23-4226-914c-a3e988b46eb3" alt="Panels 1">
+</div>
