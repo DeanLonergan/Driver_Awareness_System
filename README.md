@@ -21,24 +21,33 @@ In this example, simulated within CANoe, we can see the yellow car approach the 
 *note: DUT = Device Under Test (the EGO vehicle)*
 
 ## How it works
+
+### System Architecture
+
+<div align="center">
+    <img src="https://github.com/DeanLonergan/Driver_Awareness_System/assets/74914758/d7e66336-ac04-4907-a28d-11be3fc0acb7" alt="Message Bus Architecture">
+</div>
+
+### Locating the other vehicle
+
 <div align="center">
     <img src="https://github.com/DeanLonergan/Driver_Awareness_System/assets/74914758/8fc80fd3-b9e7-40ed-ad34-95391ec3696e" alt="Image 1">
     <img src="https://github.com/DeanLonergan/Driver_Awareness_System/assets/74914758/5440628c-c1d8-4978-80a5-764facb422f1" alt="Image 2">
 </div>
 
-* Use the longitude and latitude of both vehicles to determine which quadrant (NE, NW, SE, SW) Car 2 is in relative to the DUT. 
-* Adjust the quadrants based on the DUT's heading to align with the DUT's orientation. 
-* Use an equation developed by mobileye.com and both vehicles' speeds', to determine if the vehicle ahead is at a safe distance.
-* Update system variables to indicate whether the other vehicle is in front, right, left, or rear of the DUT and at a safe distance.
+* Use the longitude and latitude of both vehicles to determine which quadrant (NE, NW, SE, SW) the other car is in, relative to the DUT.
+* Adjust the quadrants based on the DUT's heading to align with the DUT's orientation.
+* Use an equation developed by Mobileye.com and both vehicles' speeds to determine if the vehicle ahead is at a safe distance.
+* Update system variables to indicate whether the other vehicle is in front, right, left, or rear of the DUT and if it is at a safe distance.
 
-## Calculating Safe Longitudinal Distance
+### Calculating Safe Longitudinal Distance
 If there is a vehicle ahead:
 
 <div align="center">
     <img src="https://github.com/DeanLonergan/Driver_Awareness_System/assets/74914758/5ee3b9a1-8c04-4f8a-a07c-4b829de4d311" alt="Calculating Distance 1">
 </div>
 
-Use the vehicle's distance, speed, and known kinematic data (derived from IEEE 2846) in the Safe Longitudinal Distance equation:
+Use the vehicles' speeds and known kinematic data (derived from IEEE 2846) in the Safe Longitudinal Distance equation:
 
 <div align="center">
     <img src="https://github.com/DeanLonergan/Driver_Awareness_System/assets/74914758/3965ab22-ca0d-4469-8960-35236817f40e" alt="Calculating Distance 2">
@@ -79,14 +88,39 @@ The benefits of this approach include:
 *ISO 26262-6: https://www.iso.org/standard/68388.html*
 
 ## How to run
-This project has been developed using vector CANoe 17 SP2 (Build 17.2.88) and may not work on older versions.
+This project has been developed using Vector CANoe 17 SP2 (Build 17.2.88) and may not work on older versions.
 
 To open the project, you must first load the configuration in CANoe:
+
+![Load Config](https://github.com/DeanLonergan/Driver_Awareness_System/assets/74914758/cf9cf0af-ba7b-4648-9388-592252a09d5f)
+
+When opened for the first time, the panels may not be displayed correctly. This can be resolved by first opening the panel editor:
+
+![Panels](https://github.com/DeanLonergan/Driver_Awareness_System/assets/74914758/4ab94cc1-4f15-42a7-9cf6-f2708ece6486)
+
+Inside the panel editor, change the background image as appropriate:
+
 <div align="center">
-    <img src="https://github.com/DeanLonergan/Driver_Awareness_System/assets/74914758/5fdf1dd2-9c87-49ce-ba01-4379b90b2ef2" alt="Load config">
+    <img src="https://github.com/DeanLonergan/Driver_Awareness_System/assets/74914758/d9179f98-7efe-45ff-9e7a-3655d3ffcba3" alt="Edit panel">
 </div>
 
-When opened for the first time, it is important to make sure that the panels display correctly. This can be done by first opening the panel editor:
+The background images can be found in 'Panel Images,' inside the 'Driver Awareness System' folder:
+
+![GitHub Panel Images](https://github.com/DeanLonergan/Driver_Awareness_System/assets/74914758/6ecc8cd2-54f2-45a4-aafc-bc9bee1bd336)
+
+When opened, the simulation can be run and stopped by using the appropriate buttons:
+
+![Start Stop](https://github.com/DeanLonergan/Driver_Awareness_System/assets/74914758/1afc4d5c-1dfc-4489-ba98-e69ec2706202)
+
 <div align="center">
-    <img src="https://github.com/DeanLonergan/Driver_Awareness_System/assets/74914758/5eac1f16-4d23-4226-914c-a3e988b46eb3" alt="Panels 1">
+    <img src="https://github.com/DeanLonergan/Driver_Awareness_System/assets/74914758/81a2604d-50f4-4b0c-84f2-7c003b39c87a" alt="CANoe running">
 </div>
+
+If you would like to change the scenario, open the Scenario Manager (make sure that 'Start on measurement start' is enabled) and click 'Load scenario':
+
+![Scenario Manager](https://github.com/DeanLonergan/Driver_Awareness_System/assets/74914758/f0a804d3-7267-4a92-88f5-bd860debde5a)
+
+Any of the three SETU scenarios can now be run. You can also create your own scenarios using the scenario editor.
+
+
+
